@@ -46,25 +46,25 @@ In fact, GLUE consists of 9 different dataset, each with different pourposes and
     Each script is set with the hyperparameters described in the official papers. Any possible difference is documented in the script itself.
 
 5. Evaluation\
-In order to evaluate the obtained finetuned models, you find different python scripts in this repo in `glue_tasks/inference/` directory.
-You have simply to load the correct finetuned model for you task 'checkpoint_best.pt`:
-```python
-roberta = RobertaModel.from_pretrained(
-    '/path/to/checkpoints/',
-    checkpoint_file='checkpoint_best.pt',
-    data_name_or_path='../task-bin'
-)
-```
+    In order to evaluate the obtained finetuned models, you find different python scripts in this repo in `glue_tasks/inference/` directory.
+    You have simply to load the correct finetuned model for you task 'checkpoint_best.pt`:
+    ```python
+    roberta = RobertaModel.from_pretrained(
+        '/path/to/checkpoints/',
+        checkpoint_file='checkpoint_best.pt',
+        data_name_or_path='../task-bin'
+    )
+    ```
 
-Note that for `MNLI` inference you can load `roberta.large.mnli` model also from  `toch.hub`:
-```python
-# Large MNLI model from torch hub
-roberta = torch.hub.load("pytorch/fairseq:main", "roberta.large.mnli")
-roberta.eval()
+    Note that for `MNLI` inference you can load `roberta.large.mnli` model also from  `toch.hub`:
+    ```python
+    # Large MNLI model from torch hub
+    roberta = torch.hub.load("pytorch/fairseq:main", "roberta.large.mnli")
+    roberta.eval()
 
-# Your model
-robe'/path/to/checkpoints/',
-    checkpoint_file='checkpoint_best.pt',
-    data_name_or_path='../MNLI-bin'
-)
+    # Your model
+    robe'/path/to/checkpoints/',
+        checkpoint_file='checkpoint_best.pt',
+        data_name_or_path='../MNLI-bin'
+    )
 

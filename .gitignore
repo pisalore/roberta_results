@@ -128,4 +128,18 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# Directories an generated files
 fairseq/
+glue_data/
+outputs/
+CoLA-bin/
+MNLI-bin/
+MRPC-bin/
+QNLI-bin/
+QQP-bin/
+RTE-bin/
+SST-2-bin/
+STS-B-bin/
+dict.txt
+encoder.json
+vocab.bpe
