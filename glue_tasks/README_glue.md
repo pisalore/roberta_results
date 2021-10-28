@@ -46,7 +46,7 @@ In fact, GLUE consists of 9 different dataset, each with different pourposes and
     Each script is set with the hyperparameters described in the official papers. Any possible difference is documented in the script itself.
 
 5. Evaluation\
-    In order to evaluate the obtained finetuned models, you find different python scripts in this repo in `glue_tasks/inference/` directory.
+    In order to evaluate the obtained finetuned models, you find different python scripts in this repo in `glue_tasks/evaluation/` directory.
     You have simply to load the correct finetuned model for you task 'checkpoint_best.pt`:
     ```python
     roberta = RobertaModel.from_pretrained(

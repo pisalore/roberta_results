@@ -143,3 +143,9 @@ STS-B-bin/
 dict.txt
 encoder.json
 vocab.bpe
+evaluation/
+
+# Downloaded models
+roberta.base/
+roberta.large.mnli/
+roberta.large
