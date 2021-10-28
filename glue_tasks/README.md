@@ -3,7 +3,7 @@
 Reproduce the glue tasks results with RoBERTa. See the [RoBERTa submission at GLUE](https://gluebenchmark.com/submission/JuLiHrAkS9VSQRh1W6TJ9V9SOu23/-Lk5ZrckAabWVeQBoxrA).\
 In this doc I will synthetize steps and their motivations.
 
-"The General Language Understanding Evaluation (GLUE) benchmark is a collection of resources for training, evaluating, and analyzing natural language understanding systems."
+*"The General Language Understanding Evaluation (GLUE) benchmark is a collection of resources for training, evaluating, and analyzing natural language understanding systems."*
 
 In fact, GLUE consists of 9 different dataset, each with different pourposes and origins. Please check the [official GLUE paper](https://openreview.net/pdf?id=rJ4km2R5t7) for further details.
 
