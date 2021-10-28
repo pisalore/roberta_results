@@ -40,7 +40,7 @@ In fact, GLUE consists of 9 different dataset, each with different pourposes and
     ```shell
     CUDA_VISIBLE_DEVICES=0 fairseq-hydra-train --config-dir ../fairseq/examples/roberta/config/finetuning --config-name <task-name> task.data=/path/to/roberta_results/glue_tasks/MRPC-bin checkpoint.restore_file=/path/to/roberta.base/model.pt
     ```
-    The main difference is that, with the shell script, you can finetune with the architecture you prefer, and that all `checkpoint_*.pt` files generated will be saved in the `SAVE_DIR` you provide; on the other hand,  with the second option you can train only `roberta.base` and only `checkpoint_last.pt` and `checkpoint_best.pt` will be saved, in a `checkpoints/` directory.
+    The main difference is that, with the shell script, you can finetune with the architecture you prefer, and that all `checkpoint_*.pt` files generated will be saved in the `SAVE_DIR` you provide; on the other hand,  with the second option you can train only `roberta.base` and only `checkpoint_last.pt` and `checkpoint_best.pt` will be saved, in a `outputs/</date>/<time>/checkpoints/` directory.
 
 
     Each script is set with the hyperparameters described in the official papers. Any possible difference is documented in the script itself.
@@ -68,3 +68,9 @@ In fact, GLUE consists of 9 different dataset, each with different pourposes and
         data_name_or_path='../MNLI-bin'
     )
 
+
+**NB: Please, replace row 227 in** `/home/lpisaneschi/ml/fairseq/fairseq/tasks/sentence_prediction.py` with 
+```python
+return [float(x.replace(',', '.')) for x in values]
+```
+**This is necessary to make STS-B preprocessing work. Python cannot cast a string with a comma "," to float. The STS-B dataset, however, uses this notation.**
