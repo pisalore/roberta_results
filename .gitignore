@@ -140,6 +140,9 @@ QQP-bin/
 RTE-bin/
 SST-2-bin/
 STS-B-bin/
+RACE/
+RACE-extracted/
+RACE-bin/
 dict.txt
 encoder.json
 vocab.bpe

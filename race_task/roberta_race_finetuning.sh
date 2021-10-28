@@ -11,7 +11,7 @@ LR="1e-05"
 NUM_CLASSES="4"
 MAX_SENTENCES="1" 
 UPDATE_FREQ="16" # Accumulate gradients to simulate training on 16 GPUs. See https://github.com/pytorch/fairseq/issues/1946.
-DATA_DIR="/home/lpisaneschi/ml/fairseq/RACE-bin/"
+DATA_DIR="/home/lpisaneschi/roberta_results/race_task/RACE-bin"
 ROBERTA_PATH="/home/lpisaneschi/roberta_results/roberta.large/model.pt" 
 
 CUDA_VISIBLE_DEVICES=0,1 fairseq-train $DATA_DIR --ddp-backend=no_c10d \
