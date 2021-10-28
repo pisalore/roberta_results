@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # NLI finetuning. Hyperparameters are taken from RoBERTa paper.
-# Change the model (base or large or large.mnli) suiting your needs, in OBERTA_PATH and roberta_arch
+# Change the model (base or large or large.mnli) suiting your needs, in ROBERTA_PATH and roberta_arch
 # ROBERTA_PATH is the path to roberta pretrained model.
 # SAVE_DIR is where to save the finetuned models.
 # Check https://github.com/pytorch/fairseq/blob/e3c4282551e819853952284681e9ed60398c5c4a/examples/roberta/README.glue.md
