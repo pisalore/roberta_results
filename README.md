@@ -4,11 +4,12 @@ Machine Learning exam at University of Study of Florence, Italy.
 RoBERTa paper: https://arxiv.org/pdf/1907.11692.pdf \
 fairseq repository on GitHUb: https://github.com/pytorch/fairseq \
 GLUE Benchmark: https://gluebenchmark.com 
+RACE Benchmark: http://www.qizhexie.com/data/RACE_leaderboard.html
 
 ## Introduction
-Since NLP tasks are gaining more and more importance in the AI universe nowdays, I decided to focus on bidirectional transformers for my Machine Learning exam, in particular on Google AI [BERT](https://arxiv.org/pdf/1810.04805.pdf) and one of its optimizations, which is Facebook AI [RoBERTa](BERT). Transformers are deep learning models which use the **attention mechanism** in order to understand sentences meaning giving to each part of them a different significance weight. Humans do not read only in one direction, but they take care also of already read words to completetly understand a sentence: bidirectional transformers try to do exactly the same.\
+Since NLP tasks are gaining more and more importance in the AI universe nowdays, I decided to focus on bidirectional transformers for my Machine Learning exam, in particular on Google AI [BERT](https://arxiv.org/pdf/1810.04805.pdf) and one of its optimizations, which is Facebook AI [RoBERTa](https://arxiv.org/pdf/1907.11692.pdf). Transformers are deep learning models which use the **attention mechanism** in order to understand sentences meaning giving to each part of them a different significance weight. Humans do not read only in one direction, but they take care also of already read words to completetly understand a sentence: bidirectional transformers try to do exactly the same.
 
-RoBERTa reached some state of the art results in 2019 when was published. **fairseq** repository contain everything to reproduce such results, pre-trained models and a good documentation; however, some work could be trivial. In this repository I would like to gather my experience and everything I found useful to reproduce:
+RoBERTa reached some state of the art results in 2019 when was published. [fairseq](https://github.com/pytorch/fairseq) repository contains everything to reproduce such results, pre-trained models and a good documentation; however, some work could be trivial. In this repository I would like to gather my experience and everything I found useful to reproduce:
 -  [GLUE Benchmark results](https://gluebenchmark.com/submission/JuLiHrAkS9VSQRh1W6TJ9V9SOu23/-Lk5ZrckAabWVeQBoxrA)
 - [RACE Benchmark results](http://www.cs.cmu.edu/~glai1/data/race/)
 
@@ -42,7 +43,7 @@ I share my scripts and step by step guide to put everyone in the conditions to e
     pip install --editable ./
     ```
 
-5. Download the models wherever you want (better in `roberta_results`). RoBERTa uses `base.model`, `large.model` and `large.mnli` models to be finutuned and used differently for each task. Download and extract them following these links:
+5. Download the models wherever you want (better in `roberta_results`). RoBERTa uses `roberta.base`, `roberta.large` and `roberta.large.mnli` models to be finutuned and they are used differently for each task. Download and extract them following these links:
     - [roberta.base](https://dl.fbaipublicfiles.com/fairseq/models/roberta.base.tar.gz)
     - [roberta.large](https://dl.fbaipublicfiles.com/fairseq/models/roberta.large.tar.gz)
     - [roberta.large.mnli](https://dl.fbaipublicfiles.com/fairseq/models/roberta.large.mnli.tar.gz)
