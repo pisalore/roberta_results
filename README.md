@@ -24,18 +24,18 @@ I share my scripts and step by step guide to put everyone in the conditions to e
 
 **Please, follow this doc for the first standard environment installation**, then check the experiments directories you are interested in.
 
-1. Install [Anaconda](https://www.anaconda.com/products/individual) and create a new conda environment:
+1. **Install** [Anaconda](https://www.anaconda.com/products/individual) **and create a new conda environment:**
     ```shell
     conda env create -f environment.yml
     conda deactivate && conda activate roberta_results
     ```
 
-2. Git clone this repo:
+2. **Git clone this repo:**
     ```shell
     git clone https://github.com/pisalore/roberta_results
     ```  
 
-4. Git clone fairseq repo:
+4. **Git clone fairseq repo:**
     ```shell
     cd roberta_results
     https://github.com/pytorch/fairseq
@@ -43,7 +43,7 @@ I share my scripts and step by step guide to put everyone in the conditions to e
     pip install --editable ./
     ```
 
-5. Download the models wherever you want (better in `roberta_results`). RoBERTa uses `roberta.base`, `roberta.large` and `roberta.large.mnli` models to be finutuned and they are used differently for each task. Download and extract them following these links:
+5. **Download the models** wherever you want (better in `roberta_results`). RoBERTa uses `roberta.base`, `roberta.large` and `roberta.large.mnli` models to be finutuned and they are used differently for each task. **Download and extract them following these links:**
     - [roberta.base](https://dl.fbaipublicfiles.com/fairseq/models/roberta.base.tar.gz)
     - [roberta.large](https://dl.fbaipublicfiles.com/fairseq/models/roberta.large.tar.gz)
     - [roberta.large.mnli](https://dl.fbaipublicfiles.com/fairseq/models/roberta.large.mnli.tar.gz)
