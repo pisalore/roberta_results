@@ -1,8 +1,8 @@
 name: roberta_results
 channels:
   - pytorch
-  - conda-forge
   - nvidia
+  - conda-forge
   - defaults
 dependencies:
   - _libgcc_mutex=0.1=main
@@ -112,6 +112,7 @@ dependencies:
     - blis==0.7.5
     - catalogue==2.0.6
     - cffi==1.15.0
+    - colorama==0.4.4
     - cycler==0.10.0
     - cymem==2.0.6
     - cython==0.29.24
