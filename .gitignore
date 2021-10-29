@@ -131,6 +131,7 @@ dmypy.json
 # Directories an generated files
 fairseq/
 glue_data/
+checkpoints/
 outputs/
 CoLA-bin/
 MNLI-bin/
