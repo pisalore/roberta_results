@@ -4,6 +4,7 @@ Machine Learning exam at University of Study of Florence, Italy.
 RoBERTa paper: https://arxiv.org/pdf/1907.11692.pdf \
 fairseq repository on GitHUb: https://github.com/pytorch/fairseq \
 GLUE Benchmark: https://gluebenchmark.com \
+SuperGLUE Benchmark (for WSC): https://super.gluebenchmark.com/
 RACE Benchmark: http://www.qizhexie.com/data/RACE_leaderboard.html
 
 ## Introduction
@@ -11,6 +12,7 @@ Since NLP tasks are gaining more and more importance in the AI universe nowdays,
 
 RoBERTa reached some state of the art results in 2019 when was published. [fairseq](https://github.com/pytorch/fairseq) repository contains everything to reproduce such results, pre-trained models and a good documentation; however, some work could be trivial. In this repository I would like to gather my experience and everything I found useful to reproduce:
 - [GLUE Benchmark results](https://gluebenchmark.com/submission/JuLiHrAkS9VSQRh1W6TJ9V9SOu23/-Lk5ZrckAabWVeQBoxrA)
+- [SuperGLUE Benchmark results (WSC)](https://gluebenchmark.com/submission/JuLiHrAkS9VSQRh1W6TJ9V9SOu23/-Lk5ZrckAabWVeQBoxrA)
 - [RACE Benchmark results](http://www.cs.cmu.edu/~glai1/data/race/)
 
 I share my scripts and step by step guide to put everyone in the conditions to easily reproduce and understand the above mentioned results.
