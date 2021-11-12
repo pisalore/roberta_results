@@ -154,3 +154,7 @@ vocab.bpe
 roberta.base/
 roberta.large.mnli/
 roberta.large
+roberta.large.wsc
+
+# HTML slides
+exam_presentation.slides.html
