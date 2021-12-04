@@ -6,14 +6,14 @@ Evaluation for STS task. The metric it the Pearson's Correlation Coefficient.
 Regression problem.
 """
 roberta = RobertaModel.from_pretrained(
-    '/home/lpisaneschi/ml/fairseq/checkpoints/',
+    '/home/lpisaneschi/roberta_results/checkpoints/',
     checkpoint_file='checkpoint_best_stsb_base.pt',
-    data_name_or_path='../STS-B-bin'
+    data_name_or_path='../glue_tasks/STS-B-bin'
 )
 roberta.cuda()
 roberta.eval()
 gold, pred = [], []
-with open('../glue_data/STS-B/dev.tsv') as fin:
+with open('../glue_tasks/glue_data/STS-B/dev.tsv') as fin:
     fin.readline()
     for index, line in enumerate(fin):
         tokens = line.strip().split('\t')

@@ -4,9 +4,9 @@ from fairseq.models.roberta import RobertaModel
 Evaluation for RTE task. The metric it the Accuracy.
 """
 roberta = RobertaModel.from_pretrained(
-    '/home/lpisaneschi/ml/fairseq/checkpoints/',
+   '/home/lpisaneschi/roberta_results/checkpoints/',
     checkpoint_file='checkpoint_best_rte_large_mnli.pt',
-    data_name_or_path='../RTE-bin'
+    data_name_or_path='../glue_tasks/RTE-bin'
 )
 
 label_fn = lambda label: roberta.task.label_dictionary.string(
@@ -15,7 +15,7 @@ label_fn = lambda label: roberta.task.label_dictionary.string(
 ncorrect, nsamples = 0, 0
 roberta.cuda()
 roberta.eval()
-with open('../glue_data/RTE/dev.tsv') as fin:
+with open('../glue_tasks/glue_data/RTE/dev.tsv') as fin:
     fin.readline()
     for index, line in enumerate(fin):
         tokens = line.strip().split('\t')

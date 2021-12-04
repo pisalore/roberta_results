@@ -4,9 +4,9 @@ from fairseq.models.roberta import RobertaModel
 Evaluation for MRPC task. The metric it the Accuracy and F1 score.
 """
 roberta = RobertaModel.from_pretrained(
-    '/home/lpisaneschi/ml/fairseq/checkpoints/',
+    '/home/lpisaneschi/roberta_results/checkpoints/',
     checkpoint_file='checkpoint_best_mrpc_base.pt',
-    data_name_or_path='../MRPC-bin'
+    data_name_or_path='../glue_tasks/MRPC-bin'
 )
 label_fn = lambda label: roberta.task.label_dictionary.string(
     [label + roberta.task.label_dictionary.nspecial]
@@ -14,7 +14,7 @@ label_fn = lambda label: roberta.task.label_dictionary.string(
 ncorrect, nsamples, pred_positives, true_positives, false_negatives = 0, 0, 0, 0, 0
 roberta.cuda()
 roberta.eval()
-with open('../glue_data/MRPC/dev.tsv') as fin:
+with open('../glue_tasks/glue_data/MRPC/dev.tsv') as fin:
     fin.readline()
     for index, line in enumerate(fin):
         tokens = line.strip().split('\t')

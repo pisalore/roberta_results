@@ -12,9 +12,9 @@ in this case, remember to change the head name to 'mnli'
 # roberta.eval()
 
 roberta = RobertaModel.from_pretrained(
-    '/home/lpisaneschi/ml/fairseq/checkpoints/',
+    '/home/lpisaneschi/roberta_results/checkpoints/',
     checkpoint_file='checkpoint_best_mnli_base.pt',
-    data_name_or_path='../MNLI-bin'
+    data_name_or_path='../glue_tasks/MNLI-bin'
 )
 roberta.cuda()
 roberta.eval()
@@ -23,7 +23,7 @@ roberta.eval()
 # test both on matched and mismatched test sets.
 ncorrect, nsamples = 0, 0
 with torch.no_grad():
-    with open('../glue_data/MNLI/dev_mismatched.tsv') as fin:
+    with open('../glue_tasks/glue_data/MNLI/dev_mismatched.tsv') as fin:
         fin.readline()
         for index, line in enumerate(fin):
             tokens = line.strip().split('\t')
