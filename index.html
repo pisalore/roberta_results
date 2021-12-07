@@ -14456,8 +14456,8 @@ considering the following key points:</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="MNLI-(The-Multi-Genre-Natural-Language-Inference-Corpus)">MNLI (The Multi-Genre Natural Language Inference Corpus)<a class="anchor-link" href="#MNLI-(The-Multi-Genre-Natural-Language-Inference-Corpus)">&#182;</a></h3><p><em>"[...] is a crowdsourced collection of sentence pairs with textual entailment annotations. Given a premise sentence
 and a hypothesis sentence, the task is to predict whether the premise entails the hypothesis (entailment), contradicts
-the hypothesis (contradiction), or neither (neutral)."</em></p>
-<p><strong>Matched</strong> sentences belong to same domain, the other way round for <strong>mismatched</strong> sentences</p>
+the hypothesis (contradiction), or neither (neutral)."</em> <br />
+<strong>Matched</strong> sentences belong to same domain, the other way round for <strong>mismatched</strong> sentences</p>
 <ul>
 <li><strong>392703</strong> annotated train sentences</li>
 <li><strong>9816</strong> annotated matched and <strong>9833</strong> annotated mismatched development sentences</li>
@@ -14516,6 +14516,11 @@ the hypothesis (contradiction), or neither (neutral)."</em></p>
 <td>roberta.large.mnli</td>
 <td>90,1%</td>
 <td>90,59%</td>
+</tr>
+<tr>
+<td>bert.large</td>
+<td>86,6%</td>
+<td>85,9%</td>
 </tr>
 </tbody>
 </table>
@@ -14590,6 +14595,10 @@ from Wikipedia) contains the answer to the corresponding question (written by an
 <td>roberta.large</td>
 <td>94,4%</td>
 </tr>
+<tr>
+<td>bert.large</td>
+<td>92,7%</td>
+</tr>
 </tbody>
 </table>
 
@@ -14655,6 +14664,10 @@ question-answering website Quora. The task is to determine whether a pair of que
 <td>roberta.large</td>
 <td>92,2%</td>
 </tr>
+<tr>
+<td>bert.large</td>
+<td>91,3%</td>
+</tr>
 </tbody>
 </table>
 
@@ -14665,8 +14678,6 @@ question-answering website Quora. The task is to determine whether a pair of que
 <h3 id="RTE-(Recognizing-Textual-Entailment)">RTE (Recognizing Textual Entailment)<a class="anchor-link" href="#RTE-(Recognizing-Textual-Entailment)">&#182;</a></h3><p><em>"[...]The Recognizing Textual Entailment (RTE) datasets come from a series of annual textual
 entailment challenges. All datasets are converted to a two-class split, where
 for three-class datasets we collapse neutral and contradiction into not entailment, for consistency."</em></p>
-<p>As it is indicated in the official paper, the large model for finetuning on RTE task is the one obtained from a
-pre-finetuning of <code>roberta.large</code> on MNLI dataset.</p>
 <ul>
 <li><strong>2491</strong> annotated train sentences</li>
 <li><strong>278</strong> annotated development sentences</li>
@@ -14721,6 +14732,10 @@ pre-finetuning of <code>roberta.large</code> on MNLI dataset.</p>
 <tr>
 <td>roberta.large.mnli</td>
 <td>90,1%</td>
+</tr>
+<tr>
+<td>bert.large</td>
+<td>70,1%</td>
 </tr>
 </tbody>
 </table>
@@ -14785,6 +14800,10 @@ sentence. Labels are from two-way (positive/negative) class split."</em></p>
 <tr>
 <td>roberta.large</td>
 <td>96,0%</td>
+</tr>
+<tr>
+<td>bert.large</td>
+<td>94,9%</td>
 </tr>
 </tbody>
 </table>
@@ -14851,6 +14870,10 @@ equivalent."</em></p>
 <td>roberta.large.mnli</td>
 <td>92,3%</td>
 </tr>
+<tr>
+<td>bert.large</td>
+<td>89,3%</td>
+</tr>
 </tbody>
 </table>
 
@@ -14871,10 +14894,6 @@ books and journal articles on linguistic theory."</em></p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>If you had eaten more, you would want less. cj99 0 As you eat the most, you want the least.</td>
-<td>1</td>
-</tr>
 <tr>
 <td>As you eat the most, you want the least.</td>
 <td>0</td>
@@ -14917,6 +14936,10 @@ books and journal articles on linguistic theory."</em></p>
 <tr>
 <td>roberta.large</td>
 <td>0,68</td>
+</tr>
+<tr>
+<td>bert.large</td>
+<td>0,61</td>
 </tr>
 </tbody>
 </table>
@@ -14984,6 +15007,10 @@ Each pair is human-annotated with a similarity score from 1 to 5; the task is to
 <tr>
 <td>roberta.large.mnli</td>
 <td>0,92</td>
+</tr>
+<tr>
+<td>bert.large</td>
+<td>0,90</td>
 </tr>
 </tbody>
 </table>
